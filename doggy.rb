@@ -8,6 +8,7 @@ class Dog
       @name = dog_name
       @age = dog_age
       @location =location
+      @@time = 0
       
     end
     def speak
@@ -17,12 +18,13 @@ class Dog
         @@walk_number +=1
         @@distance +=distance
         @@location = location
+       @@time= Time.new
 
         self
         
     end
     def display_walks
-        return "I have been for #{@@walk_number} walks today. Recently, I went to #{@@location} for walk and have walked #{@@distance} kilometers today "
+        return "I have been for #{@@walk_number} walks today. Recently, I went to #{@@location} for walk at #{@@time.ctime} and have walked #{@@distance} kilometers today "
     end
   end
   
@@ -30,5 +32,5 @@ class Dog
   doggo.walk("Brisbane", 2)
   doggo.walk("Nundah, Qld", 5)
  p doggo.display_walks
-
+ 
   

@@ -13,13 +13,14 @@ class Dog
     end
     def walk
         @@walk_number +=1
-        return "I have been for #{@@walk_number} walks."
+        self
+        
     end
-    
+    def display_walks
+        return "I have been for #{@@walk_number} walks today."
+    end
   end
   
   doggo = Dog.new('Rover', 2, "Brisbane")
-  p doggo.location
-  doggo.walk
-  doggo.walk
-  p doggo.walk
+  p doggo.walk.walk.walk.display_walks
+  

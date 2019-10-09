@@ -21,4 +21,5 @@ class Dog
   doggo = Dog.new('Rover', 2, "Brisbane")
   p doggo.location
   doggo.walk
+  doggo.walk
   p doggo.walk
